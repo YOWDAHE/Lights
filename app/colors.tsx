@@ -29,7 +29,6 @@ const Colors = () => {
 			}
 
 			if (newIndex !== currentColorIndex) {
-				// Start the animation
 				Animated.timing(colorAnim, {
 					toValue: newIndex,
 					duration: 500,
@@ -68,7 +67,7 @@ const Colors = () => {
 						{ backgroundColor: interpolateColor },
 					]}
 				/>
-				<ThemedText style={styles.text}>{x}</ThemedText>
+				{/* <ThemedText style={styles.text}>{loading? 'Loading': show?.name}</ThemedText> */}
 			</TouchableOpacity>
 		</View>
 	);
