@@ -7,7 +7,7 @@ const Index = () => {
 	return (
 		<View style={styles.container}>
 			<View style={styles.buttonContainer}>
-				<Link href="/choice" asChild>
+				<Link href="/login" asChild>
 					<Button title="Log In" />
 				</Link>
 			</View>

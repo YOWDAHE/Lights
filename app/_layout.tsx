@@ -33,8 +33,17 @@ export default function RootLayout() {
 	}
 
 	return (
-		<ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-			<Stack initialRouteName="index">
+		// <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
+		<ThemeProvider value={DefaultTheme}>
+			<Stack initialRouteName="index" screenOptions={{
+				headerShadowVisible: false,
+				headerStyle: {
+					backgroundColor: 'white',
+				},
+				contentStyle: {
+					backgroundColor: 'white',
+				}
+			}}>
 				<Stack.Screen name="login" options={{contentStyle: {backgroundColor: 'white'}, headerShadowVisible: false}} />
 				<Stack.Screen name="index" options={{ headerShown: false }} />
 				<Stack.Screen name="(users)/home" options={{ title: 'home',}} />
